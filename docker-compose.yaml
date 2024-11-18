@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  spring-app:
+    image: "udhayakumar124/springboot_project"
+    ports:
+      - "9090:9090"
+    networks:
+      - "spring_network"
+    volumes:
+      - "spring_volume:/var/jenkins_home"
+networks:
+  spring_network:
+volumes:
+  spring_volume:
